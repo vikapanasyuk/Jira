@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Jira"
+    }
+  },
+  "defaultProject": "Jira",
+  "cli": {
+    "analytics": "f8f801ef-3599-4bc7-af65-6fa355046261"
+  }
 }

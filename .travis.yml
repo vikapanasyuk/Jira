@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '10'
+before_install:
+- npm install -g @angular/cli
+install: npm install
+branches:
+  only:
+  - main
+deploy:
+  provider: heroku
+  app: jira-2021
+  api_key:
+    secure: FDW6fyNwWM51ImTDAr+r1/AcHO+XjpcK+k+BvNU9VwDytoV29jsP98LCgubrbVfkoELSipDDsBPflgdFNkmDjULagRUCnPO+4402obYOr4iK3yy/XCwJ05O3By1ZwDY9wImIYG2tFw/fBcmYbrDwBpvIf1Li+wZL6TMl4n8uJTd7K5t+Yx9aH66judzxUuR3pmW0kuvePRTRDtitd88o594D9xJZSISh3Pjjk6oSaKyZ30iMolUefdYmXSr3RvVaH/Wyd/jhr7lnYP5ucFcQzl5D4ExCPmKevDSbi657jJELfTYvqotcm6oCAECCNrkIjQgFbI6a7ao3PLBnxGoKZUzIoG9fuKsAyUkN08KOHyKSffXO7tXyXF8eYysRkEamVNeQN2ErEQpdgUfdo+P8wbo98NTca58prd5d1hHnY85hkD5sHpcECJHSPXfN+CWN8lBFm3iOnONWnro9mAcJ1sqItp6V+hexepfLIfELUgNwIA7g00dH1PwoyNKpIHp7GxZ5XbU/+ohEWZpH5j16y146ITTI0daILjGwJNsrG1UUb+EDznV9HVlohYjk7wO1+i44Y+btPtHmOS61nKmwSWWzS2ARI6ulfgLta5tSZzvIC5XSWGN2jlwfJsOZOctnOsXInR6ZmUOyBI3djsJwhvvircQMFxl6Z3GOfLp5Cms=
+  on:
+    branch:
+    - main
