@@ -1,0 +1,12 @@
+.task-type {
+  width: 25px;
+  height: 25px;
+  border-radius: 0;
+  position: relative;
+  &-text {
+    position: absolute;
+    top: 3px;
+    left: 0.5px;
+    font-size: 19px;
+  }
+}

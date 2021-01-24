@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <main class="main">
+    <mat-card>
+      <form [formGroup]="userAuth" (ngSubmit)="logIn()" novalidate>
+        <mat-card-title>{{ templateText.title }}</mat-card-title>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Email" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Password" formControlName="password" required>
+        </mat-form-field>
+        <button class="full-width" type="submit" mat-raised-button color="primary">{{ templateText.btnTitle }}</button>
+      </form>
+      <div class="line">
+        <span>or</span>
+      </div>
+      <button class="full-width" type="submit" mat-raised-button color="warn" (click)="logInWithGoogle()">{{ templateText.btnTitleG }}</button>
+      <button *ngIf="isSignIn" class="full-width forgot-pass-btn"  mat-raised-button routerLink="/forgot-password" color="link">Forgot Password?</button>
+      <br>
+      <br>
+      <mat-card-subtitle>{{ templateText.accountTitle }}</mat-card-subtitle>
+      <button class="full-width" mat-raised-button color="accent" [routerLink]="pathLink">{{ templateText.btnTitleRedirect }}</button>
+    </mat-card>
+  </main>
+</div>
+

@@ -1,0 +1,28 @@
+<!-- <div style="width: 300px">
+  <mat-card *ngFor="let task of tasks">
+    <mat-card-title>{{ task.name }}</mat-card-title>
+    <mat-card-content>{{ task.description }}</mat-card-content>
+    <mat-card-actions>
+      <button mat-mini-fab class="task-type" color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon class="task-type-text">{{ iconsType[task.type]}}</mat-icon>
+      </button>
+      <button mat-mini-fab class="task-type" aria-label="Example icon button with a delete icon">
+        <mat-icon class="task-type-text">{{ iconsPriority[task.priority] }}</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+<main>
+  <h1>User Profile</h1>
+  <div *ngIf="authService.userData as user">
+    <img src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
+    <div>
+      <h2>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h2>
+      <p>User ID: <strong>{{user.uid}}</strong></p>
+      <p>Email: <strong>{{user.email}}</strong></p>
+      <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+    </div>
+  </div>
+</main>
+

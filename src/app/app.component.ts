@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Jira';
+  // item
+  // constructor(db: AngularFireDatabase) {
+  constructor() {
+    // this.item = db.list('/users').valueChanges()
+    // console.log(this.item);
+  }
 }
